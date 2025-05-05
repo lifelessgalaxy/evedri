@@ -22,7 +22,7 @@ namespace Info
 
             Login log = new Login();
 
-            Application.Run(log);
+            Application.Run(Data);
             
         }
     }

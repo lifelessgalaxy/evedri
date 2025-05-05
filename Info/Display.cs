@@ -22,7 +22,7 @@ namespace Info
         public void LandExcelFile()
         {
             Workbook book = new Workbook();
-            book.LoadFromFile(@"C:\Users\ACT-STUDENT\Desktop\Info\Book1.xlsx");
+            book.LoadFromFile(@"C:\Users\ACT-STUDENT\source\repos\evedri\Book1.xlsx");
             Worksheet sheet = book.Worksheets[0];
             DataTable dt = sheet.ExportDataTable();
             UserData.DataSource = dt;

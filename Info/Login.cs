@@ -31,7 +31,7 @@ namespace Info
                 {
                     log = true; 
                     break;
-
+                    
                 }
                 else
                 {

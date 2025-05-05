@@ -171,6 +171,8 @@ namespace Info
             btnDisplay.Visible = true;
             btnAdd.Visible = true;
         }
+
+       
     }
     
 }
