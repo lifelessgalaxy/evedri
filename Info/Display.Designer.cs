@@ -32,15 +32,15 @@ namespace Info
         {
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
+            this.btnBack = new System.Windows.Forms.Button();
             this.UserData = new System.Windows.Forms.DataGridView();
+            this.btnSearch = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.UserData)).BeginInit();
             this.SuspendLayout();
             // 
             // txtSearch
             // 
-            this.txtSearch.Location = new System.Drawing.Point(509, 34);
+            this.txtSearch.Location = new System.Drawing.Point(684, 113);
             this.txtSearch.Multiline = true;
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.Size = new System.Drawing.Size(141, 20);
@@ -49,7 +49,7 @@ namespace Info
             // button1
             // 
             this.button1.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(730, 169);
+            this.button1.Location = new System.Drawing.Point(722, 374);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(79, 36);
             this.button1.TabIndex = 2;
@@ -57,39 +57,36 @@ namespace Info
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // button2
+            // btnBack
             // 
-            this.button2.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(730, 240);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(79, 36);
-            this.button2.TabIndex = 3;
-            this.button2.Text = "CLOSE";
-            this.button2.UseVisualStyleBackColor = true;
-            this.button2.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // button3
-            // 
-            this.button3.BackColor = System.Drawing.Color.Transparent;
-            this.button3.BackgroundImage = global::Info.Properties.Resources.magnifying_glass;
-            this.button3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button3.Location = new System.Drawing.Point(661, 32);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(31, 24);
-            this.button3.TabIndex = 4;
-            this.button3.UseVisualStyleBackColor = false;
-            this.button3.Click += new System.EventHandler(this.button3_Click);
+            this.btnBack.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.Location = new System.Drawing.Point(722, 425);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(79, 36);
+            this.btnBack.TabIndex = 3;
+            this.btnBack.Text = "BACK";
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.button2_Click);
             // 
             // UserData
             // 
             this.UserData.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
             this.UserData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.UserData.Location = new System.Drawing.Point(42, 78);
+            this.UserData.Location = new System.Drawing.Point(0, 2);
             this.UserData.Name = "UserData";
-            this.UserData.Size = new System.Drawing.Size(650, 366);
+            this.UserData.Size = new System.Drawing.Size(664, 478);
             this.UserData.TabIndex = 5;
             this.UserData.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.UserData_CellDoubleClick);
+            // 
+            // btnSearch
+            // 
+            this.btnSearch.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.Location = new System.Drawing.Point(713, 158);
+            this.btnSearch.Name = "btnSearch";
+            this.btnSearch.Size = new System.Drawing.Size(79, 36);
+            this.btnSearch.TabIndex = 6;
+            this.btnSearch.Text = "SEARCH";
+            this.btnSearch.UseVisualStyleBackColor = true;
             // 
             // Display
             // 
@@ -97,9 +94,9 @@ namespace Info
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(837, 492);
             this.ControlBox = false;
+            this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.UserData);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.btnBack);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.txtSearch);
             this.Name = "Display";
@@ -115,8 +112,8 @@ namespace Info
         #endregion
         private System.Windows.Forms.TextBox txtSearch;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Button btnBack;
         public System.Windows.Forms.DataGridView UserData;
+        private System.Windows.Forms.Button btnSearch;
     }
 }
