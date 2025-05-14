@@ -65,7 +65,9 @@
             // lblNameDisplay
             // 
             this.lblNameDisplay.AutoSize = true;
+            this.lblNameDisplay.BackColor = System.Drawing.Color.Transparent;
             this.lblNameDisplay.Font = new System.Drawing.Font("Palatino Linotype", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblNameDisplay.ForeColor = System.Drawing.Color.Gold;
             this.lblNameDisplay.Location = new System.Drawing.Point(218, 23);
             this.lblNameDisplay.Name = "lblNameDisplay";
             this.lblNameDisplay.Size = new System.Drawing.Size(55, 21);
@@ -82,7 +84,9 @@
             // lblGenderDisplay
             // 
             this.lblGenderDisplay.AutoSize = true;
+            this.lblGenderDisplay.BackColor = System.Drawing.Color.Transparent;
             this.lblGenderDisplay.Font = new System.Drawing.Font("Palatino Linotype", 11.25F, System.Drawing.FontStyle.Bold);
+            this.lblGenderDisplay.ForeColor = System.Drawing.Color.Gold;
             this.lblGenderDisplay.Location = new System.Drawing.Point(210, 74);
             this.lblGenderDisplay.Name = "lblGenderDisplay";
             this.lblGenderDisplay.Size = new System.Drawing.Size(67, 21);
@@ -92,32 +96,38 @@
             // radMale
             // 
             this.radMale.AutoSize = true;
+            this.radMale.BackColor = System.Drawing.Color.Transparent;
             this.radMale.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radMale.ForeColor = System.Drawing.Color.Gold;
             this.radMale.Location = new System.Drawing.Point(298, 77);
             this.radMale.Name = "radMale";
             this.radMale.Size = new System.Drawing.Size(57, 21);
             this.radMale.TabIndex = 3;
             this.radMale.TabStop = true;
             this.radMale.Text = "Male";
-            this.radMale.UseVisualStyleBackColor = true;
+            this.radMale.UseVisualStyleBackColor = false;
             // 
             // radFemale
             // 
             this.radFemale.AutoSize = true;
+            this.radFemale.BackColor = System.Drawing.Color.Transparent;
             this.radFemale.Font = new System.Drawing.Font("Microsoft JhengHei", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.radFemale.ForeColor = System.Drawing.Color.Gold;
             this.radFemale.Location = new System.Drawing.Point(372, 77);
             this.radFemale.Name = "radFemale";
             this.radFemale.Size = new System.Drawing.Size(70, 21);
             this.radFemale.TabIndex = 4;
             this.radFemale.TabStop = true;
             this.radFemale.Text = "Female";
-            this.radFemale.UseVisualStyleBackColor = true;
+            this.radFemale.UseVisualStyleBackColor = false;
             // 
             // lblHobbyDisplay
             // 
             this.lblHobbyDisplay.AutoSize = true;
+            this.lblHobbyDisplay.BackColor = System.Drawing.Color.Transparent;
             this.lblHobbyDisplay.Font = new System.Drawing.Font("Palatino Linotype", 11.25F, System.Drawing.FontStyle.Bold);
-            this.lblHobbyDisplay.Location = new System.Drawing.Point(211, 141);
+            this.lblHobbyDisplay.ForeColor = System.Drawing.Color.Gold;
+            this.lblHobbyDisplay.Location = new System.Drawing.Point(211, 115);
             this.lblHobbyDisplay.Name = "lblHobbyDisplay";
             this.lblHobbyDisplay.Size = new System.Drawing.Size(62, 21);
             this.lblHobbyDisplay.TabIndex = 5;
@@ -126,41 +136,49 @@
             // chkBasketball
             // 
             this.chkBasketball.AutoSize = true;
+            this.chkBasketball.BackColor = System.Drawing.Color.Transparent;
             this.chkBasketball.Font = new System.Drawing.Font("Microsoft JhengHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkBasketball.Location = new System.Drawing.Point(294, 145);
+            this.chkBasketball.ForeColor = System.Drawing.Color.Gold;
+            this.chkBasketball.Location = new System.Drawing.Point(294, 119);
             this.chkBasketball.Name = "chkBasketball";
             this.chkBasketball.Size = new System.Drawing.Size(79, 19);
             this.chkBasketball.TabIndex = 6;
             this.chkBasketball.Text = "BasketBall";
-            this.chkBasketball.UseVisualStyleBackColor = true;
+            this.chkBasketball.UseVisualStyleBackColor = false;
             // 
             // chkVolleyBall
             // 
             this.chkVolleyBall.AutoSize = true;
+            this.chkVolleyBall.BackColor = System.Drawing.Color.Transparent;
             this.chkVolleyBall.Font = new System.Drawing.Font("Microsoft JhengHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkVolleyBall.Location = new System.Drawing.Point(294, 173);
+            this.chkVolleyBall.ForeColor = System.Drawing.Color.Gold;
+            this.chkVolleyBall.Location = new System.Drawing.Point(294, 147);
             this.chkVolleyBall.Name = "chkVolleyBall";
             this.chkVolleyBall.Size = new System.Drawing.Size(78, 19);
             this.chkVolleyBall.TabIndex = 7;
             this.chkVolleyBall.Text = "VolleyBall";
-            this.chkVolleyBall.UseVisualStyleBackColor = true;
+            this.chkVolleyBall.UseVisualStyleBackColor = false;
             // 
             // chkSoccer
             // 
             this.chkSoccer.AutoSize = true;
+            this.chkSoccer.BackColor = System.Drawing.Color.Transparent;
             this.chkSoccer.Font = new System.Drawing.Font("Microsoft JhengHei", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.chkSoccer.Location = new System.Drawing.Point(294, 201);
+            this.chkSoccer.ForeColor = System.Drawing.Color.Gold;
+            this.chkSoccer.Location = new System.Drawing.Point(294, 175);
             this.chkSoccer.Name = "chkSoccer";
             this.chkSoccer.Size = new System.Drawing.Size(61, 19);
             this.chkSoccer.TabIndex = 8;
             this.chkSoccer.Text = "Soccer";
-            this.chkSoccer.UseVisualStyleBackColor = true;
+            this.chkSoccer.UseVisualStyleBackColor = false;
             // 
             // lblFavorateColor
             // 
             this.lblFavorateColor.AutoSize = true;
+            this.lblFavorateColor.BackColor = System.Drawing.Color.Transparent;
             this.lblFavorateColor.Font = new System.Drawing.Font("Palatino Linotype", 11.25F, System.Drawing.FontStyle.Bold);
-            this.lblFavorateColor.Location = new System.Drawing.Point(210, 277);
+            this.lblFavorateColor.ForeColor = System.Drawing.Color.Gold;
+            this.lblFavorateColor.Location = new System.Drawing.Point(210, 251);
             this.lblFavorateColor.Name = "lblFavorateColor";
             this.lblFavorateColor.Size = new System.Drawing.Size(115, 21);
             this.lblFavorateColor.TabIndex = 9;
@@ -180,7 +198,7 @@
             "Pink",
             "Orange",
             "Purple"});
-            this.cmbFavoriteColor.Location = new System.Drawing.Point(331, 279);
+            this.cmbFavoriteColor.Location = new System.Drawing.Point(331, 253);
             this.cmbFavoriteColor.Name = "cmbFavoriteColor";
             this.cmbFavoriteColor.Size = new System.Drawing.Size(121, 21);
             this.cmbFavoriteColor.TabIndex = 10;
@@ -188,8 +206,10 @@
             // lblSaying
             // 
             this.lblSaying.AutoSize = true;
+            this.lblSaying.BackColor = System.Drawing.Color.Transparent;
             this.lblSaying.Font = new System.Drawing.Font("Palatino Linotype", 11.25F, System.Drawing.FontStyle.Bold);
-            this.lblSaying.Location = new System.Drawing.Point(204, 314);
+            this.lblSaying.ForeColor = System.Drawing.Color.Gold;
+            this.lblSaying.Location = new System.Drawing.Point(204, 288);
             this.lblSaying.Name = "lblSaying";
             this.lblSaying.Size = new System.Drawing.Size(63, 21);
             this.lblSaying.TabIndex = 11;
@@ -197,7 +217,7 @@
             // 
             // txtSaying
             // 
-            this.txtSaying.Location = new System.Drawing.Point(272, 316);
+            this.txtSaying.Location = new System.Drawing.Point(272, 290);
             this.txtSaying.Multiline = true;
             this.txtSaying.Name = "txtSaying";
             this.txtSaying.Size = new System.Drawing.Size(196, 81);
@@ -205,35 +225,41 @@
             // 
             // btnAdd
             // 
+            this.btnAdd.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAdd.ForeColor = System.Drawing.Color.Gold;
             this.btnAdd.Location = new System.Drawing.Point(146, 654);
             this.btnAdd.Name = "btnAdd";
             this.btnAdd.Size = new System.Drawing.Size(80, 35);
             this.btnAdd.TabIndex = 13;
             this.btnAdd.Text = "ADD";
-            this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.button1_Click);
             // 
             // btnDisplay
             // 
+            this.btnDisplay.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.btnDisplay.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDisplay.ForeColor = System.Drawing.Color.Gold;
             this.btnDisplay.Location = new System.Drawing.Point(271, 654);
             this.btnDisplay.Name = "btnDisplay";
             this.btnDisplay.Size = new System.Drawing.Size(80, 35);
             this.btnDisplay.TabIndex = 14;
             this.btnDisplay.Text = "DISPLAY";
-            this.btnDisplay.UseVisualStyleBackColor = true;
+            this.btnDisplay.UseVisualStyleBackColor = false;
             this.btnDisplay.Click += new System.EventHandler(this.button2_Click);
             // 
             // btnUpdate
             // 
+            this.btnUpdate.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.btnUpdate.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnUpdate.ForeColor = System.Drawing.Color.Gold;
             this.btnUpdate.Location = new System.Drawing.Point(198, 654);
             this.btnUpdate.Name = "btnUpdate";
             this.btnUpdate.Size = new System.Drawing.Size(80, 35);
             this.btnUpdate.TabIndex = 15;
             this.btnUpdate.Text = "UPDATE";
-            this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.UseVisualStyleBackColor = false;
             this.btnUpdate.Visible = false;
             this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
@@ -259,8 +285,10 @@
             // lblStatus
             // 
             this.lblStatus.AutoSize = true;
+            this.lblStatus.BackColor = System.Drawing.Color.Transparent;
             this.lblStatus.Font = new System.Drawing.Font("Palatino Linotype", 11.25F, System.Drawing.FontStyle.Bold);
-            this.lblStatus.Location = new System.Drawing.Point(204, 430);
+            this.lblStatus.ForeColor = System.Drawing.Color.Gold;
+            this.lblStatus.Location = new System.Drawing.Point(204, 404);
             this.lblStatus.Name = "lblStatus";
             this.lblStatus.Size = new System.Drawing.Size(58, 21);
             this.lblStatus.TabIndex = 18;
@@ -269,8 +297,10 @@
             // lblCourse
             // 
             this.lblCourse.AutoSize = true;
+            this.lblCourse.BackColor = System.Drawing.Color.Transparent;
             this.lblCourse.Font = new System.Drawing.Font("Palatino Linotype", 11.25F, System.Drawing.FontStyle.Bold);
-            this.lblCourse.Location = new System.Drawing.Point(198, 473);
+            this.lblCourse.ForeColor = System.Drawing.Color.Gold;
+            this.lblCourse.Location = new System.Drawing.Point(198, 447);
             this.lblCourse.Name = "lblCourse";
             this.lblCourse.Size = new System.Drawing.Size(64, 21);
             this.lblCourse.TabIndex = 19;
@@ -279,8 +309,10 @@
             // lblEmail
             // 
             this.lblEmail.AutoSize = true;
+            this.lblEmail.BackColor = System.Drawing.Color.Transparent;
             this.lblEmail.Font = new System.Drawing.Font("Palatino Linotype", 11.25F, System.Drawing.FontStyle.Bold);
-            this.lblEmail.Location = new System.Drawing.Point(208, 520);
+            this.lblEmail.ForeColor = System.Drawing.Color.Gold;
+            this.lblEmail.Location = new System.Drawing.Point(208, 494);
             this.lblEmail.Name = "lblEmail";
             this.lblEmail.Size = new System.Drawing.Size(54, 21);
             this.lblEmail.TabIndex = 20;
@@ -289,8 +321,10 @@
             // lblUsername
             // 
             this.lblUsername.AutoSize = true;
+            this.lblUsername.BackColor = System.Drawing.Color.Transparent;
             this.lblUsername.Font = new System.Drawing.Font("Palatino Linotype", 11.25F, System.Drawing.FontStyle.Bold);
-            this.lblUsername.Location = new System.Drawing.Point(174, 565);
+            this.lblUsername.ForeColor = System.Drawing.Color.Gold;
+            this.lblUsername.Location = new System.Drawing.Point(174, 539);
             this.lblUsername.Name = "lblUsername";
             this.lblUsername.Size = new System.Drawing.Size(88, 21);
             this.lblUsername.TabIndex = 21;
@@ -299,8 +333,10 @@
             // lblPassword
             // 
             this.lblPassword.AutoSize = true;
+            this.lblPassword.BackColor = System.Drawing.Color.Transparent;
             this.lblPassword.Font = new System.Drawing.Font("Palatino Linotype", 11.25F, System.Drawing.FontStyle.Bold);
-            this.lblPassword.Location = new System.Drawing.Point(179, 610);
+            this.lblPassword.ForeColor = System.Drawing.Color.Gold;
+            this.lblPassword.Location = new System.Drawing.Point(179, 584);
             this.lblPassword.Name = "lblPassword";
             this.lblPassword.Size = new System.Drawing.Size(83, 21);
             this.lblPassword.TabIndex = 22;
@@ -308,45 +344,47 @@
             // 
             // btnChoosefile
             // 
+            this.btnChoosefile.BackColor = System.Drawing.SystemColors.ActiveBorder;
             this.btnChoosefile.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnChoosefile.Location = new System.Drawing.Point(18, 190);
+            this.btnChoosefile.ForeColor = System.Drawing.Color.Gold;
+            this.btnChoosefile.Location = new System.Drawing.Point(18, 173);
             this.btnChoosefile.Name = "btnChoosefile";
             this.btnChoosefile.Size = new System.Drawing.Size(108, 30);
             this.btnChoosefile.TabIndex = 23;
             this.btnChoosefile.Text = "Choose File";
-            this.btnChoosefile.UseVisualStyleBackColor = true;
+            this.btnChoosefile.UseVisualStyleBackColor = false;
             // 
             // txtStatus
             // 
-            this.txtStatus.Location = new System.Drawing.Point(272, 430);
+            this.txtStatus.Location = new System.Drawing.Point(272, 404);
             this.txtStatus.Name = "txtStatus";
             this.txtStatus.Size = new System.Drawing.Size(148, 20);
             this.txtStatus.TabIndex = 24;
             // 
             // txtCourse
             // 
-            this.txtCourse.Location = new System.Drawing.Point(272, 475);
+            this.txtCourse.Location = new System.Drawing.Point(272, 449);
             this.txtCourse.Name = "txtCourse";
             this.txtCourse.Size = new System.Drawing.Size(148, 20);
             this.txtCourse.TabIndex = 25;
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(272, 520);
+            this.txtEmail.Location = new System.Drawing.Point(272, 494);
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(148, 20);
             this.txtEmail.TabIndex = 26;
             // 
             // txtUsername
             // 
-            this.txtUsername.Location = new System.Drawing.Point(272, 565);
+            this.txtUsername.Location = new System.Drawing.Point(272, 539);
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(148, 20);
             this.txtUsername.TabIndex = 27;
             // 
             // txtPassword
             // 
-            this.txtPassword.Location = new System.Drawing.Point(272, 610);
+            this.txtPassword.Location = new System.Drawing.Point(272, 584);
             this.txtPassword.Name = "txtPassword";
             this.txtPassword.Size = new System.Drawing.Size(148, 20);
             this.txtPassword.TabIndex = 28;
@@ -354,8 +392,10 @@
             // label1
             // 
             this.label1.AutoSize = true;
+            this.label1.BackColor = System.Drawing.Color.Transparent;
             this.label1.Font = new System.Drawing.Font("Palatino Linotype", 11.25F, System.Drawing.FontStyle.Bold);
-            this.label1.Location = new System.Drawing.Point(195, 237);
+            this.label1.ForeColor = System.Drawing.Color.Gold;
+            this.label1.Location = new System.Drawing.Point(195, 211);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(83, 21);
             this.label1.TabIndex = 29;
@@ -363,7 +403,7 @@
             // 
             // dateTimePicker1
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(280, 238);
+            this.dateTimePicker1.Location = new System.Drawing.Point(280, 212);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
             this.dateTimePicker1.TabIndex = 30;
@@ -373,7 +413,9 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.LemonChiffon;
+            this.BackgroundImage = global::Info.Properties.Resources.Information;
             this.ClientSize = new System.Drawing.Size(508, 709);
+            this.ControlBox = false;
             this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtPassword);
@@ -406,6 +448,8 @@
             this.Controls.Add(this.txtName);
             this.Controls.Add(this.lblNameDisplay);
             this.Name = "Form1";
+            this.ShowIcon = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "INFORMATION";
             ((System.ComponentModel.ISupportInitialize)(this.pcbProfile)).EndInit();
             this.ResumeLayout(false);
