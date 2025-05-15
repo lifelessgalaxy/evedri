@@ -30,90 +30,107 @@ namespace Info
         /// </summary>
         private void InitializeComponent()
         {
-            this.txtSearch = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.label1 = new System.Windows.Forms.Label();
             this.btnBack = new System.Windows.Forms.Button();
-            this.UserData = new System.Windows.Forms.DataGridView();
             this.btnSearch = new System.Windows.Forms.Button();
-            ((System.ComponentModel.ISupportInitialize)(this.UserData)).BeginInit();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.btnActive = new System.Windows.Forms.Button();
+            this.txtSearch = new System.Windows.Forms.TextBox();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // txtSearch
+            // label1
             // 
-            this.txtSearch.Location = new System.Drawing.Point(684, 113);
-            this.txtSearch.Multiline = true;
-            this.txtSearch.Name = "txtSearch";
-            this.txtSearch.Size = new System.Drawing.Size(141, 20);
-            this.txtSearch.TabIndex = 1;
-            // 
-            // button1
-            // 
-            this.button1.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(722, 374);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(79, 36);
-            this.button1.TabIndex = 2;
-            this.button1.Text = "REMOVE";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Verdana", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(44, 82);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(158, 25);
+            this.label1.TabIndex = 22;
+            this.label1.Text = "Inactive List";
             // 
             // btnBack
             // 
-            this.btnBack.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBack.Location = new System.Drawing.Point(722, 425);
+            this.btnBack.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnBack.Location = new System.Drawing.Point(63, 416);
             this.btnBack.Name = "btnBack";
-            this.btnBack.Size = new System.Drawing.Size(79, 36);
-            this.btnBack.TabIndex = 3;
-            this.btnBack.Text = "BACK";
+            this.btnBack.Size = new System.Drawing.Size(118, 65);
+            this.btnBack.TabIndex = 21;
+            this.btnBack.Text = "Back";
             this.btnBack.UseVisualStyleBackColor = true;
-            this.btnBack.Click += new System.EventHandler(this.button2_Click);
-            // 
-            // UserData
-            // 
-            this.UserData.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllHeaders;
-            this.UserData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.UserData.Location = new System.Drawing.Point(0, 2);
-            this.UserData.Name = "UserData";
-            this.UserData.Size = new System.Drawing.Size(664, 478);
-            this.UserData.TabIndex = 5;
-            this.UserData.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.UserData_CellDoubleClick);
             // 
             // btnSearch
             // 
-            this.btnSearch.Font = new System.Drawing.Font("Times New Roman", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSearch.Location = new System.Drawing.Point(713, 158);
+            this.btnSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnSearch.Location = new System.Drawing.Point(63, 205);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(79, 36);
-            this.btnSearch.TabIndex = 6;
-            this.btnSearch.Text = "SEARCH";
+            this.btnSearch.Size = new System.Drawing.Size(118, 65);
+            this.btnSearch.TabIndex = 20;
+            this.btnSearch.Text = "Search";
             this.btnSearch.UseVisualStyleBackColor = true;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(327, 66);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.RowHeadersWidth = 51;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(641, 402);
+            this.dataGridView1.TabIndex = 19;
+            // 
+            // btnActive
+            // 
+            this.btnActive.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnActive.Location = new System.Drawing.Point(63, 309);
+            this.btnActive.Name = "btnActive";
+            this.btnActive.Size = new System.Drawing.Size(118, 65);
+            this.btnActive.TabIndex = 18;
+            this.btnActive.Text = "Make it active";
+            this.btnActive.UseVisualStyleBackColor = true;
+            this.btnActive.Click += new System.EventHandler(this.btnActive_Click);
+            // 
+            // txtSearch
+            // 
+            this.txtSearch.Font = new System.Drawing.Font("Verdana", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtSearch.Location = new System.Drawing.Point(54, 157);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(2);
+            this.txtSearch.Multiline = true;
+            this.txtSearch.Name = "txtSearch";
+            this.txtSearch.Size = new System.Drawing.Size(138, 36);
+            this.txtSearch.TabIndex = 17;
             // 
             // Display
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(837, 492);
+            this.ClientSize = new System.Drawing.Size(1202, 520);
             this.ControlBox = false;
-            this.Controls.Add(this.btnSearch);
-            this.Controls.Add(this.UserData);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.btnBack);
-            this.Controls.Add(this.button1);
+            this.Controls.Add(this.btnSearch);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.btnActive);
             this.Controls.Add(this.txtSearch);
             this.Name = "Display";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Display";
             this.TransparencyKey = System.Drawing.Color.DimGray;
-            ((System.ComponentModel.ISupportInitialize)(this.UserData)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
         }
 
         #endregion
-        private System.Windows.Forms.TextBox txtSearch;
-        private System.Windows.Forms.Button button1;
+
+        private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Button btnBack;
-        public System.Windows.Forms.DataGridView UserData;
         private System.Windows.Forms.Button btnSearch;
+        public System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.Button btnActive;
+        private System.Windows.Forms.TextBox txtSearch;
     }
 }

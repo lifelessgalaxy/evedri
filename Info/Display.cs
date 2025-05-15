@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -13,100 +14,137 @@ namespace Info
 {
     public partial class Display : Form
     {
+        dasboard form4;
         public Display()
         {
             InitializeComponent();
             LandExcelFile();
+            dataGridView1.ClearSelection();
+            form4 = new dasboard(Admin.Name);
         }
 
-        public void LandExcelFile()
+        public void LoadInactiveData()
         {
             Workbook book = new Workbook();
-            book.LoadFromFile(@"C:\Users\ACT-STUDENT\source\repos\evedri\Book1.xlsx");
+            book.LoadFromFile(path.pathfile); //Change the path to where is the excel locate.
             Worksheet sheet = book.Worksheets[0];
-            DataTable dt = sheet.ExportDataTable();
-            UserData.DataSource = dt;
+            DataTable dt = new DataTable();
+
+            int columnCount = sheet.Columns.Length;
+            for (int col = 1; col <= columnCount; col++)
+            {
+                // Get column header from first row
+                dt.Columns.Add(sheet.Range[1, col].Value);
+            }
+
+            // Loop through rows starting from row 2 (assuming row 1 is header)
+            for (int row = 2; row <= sheet.LastRow; row++)
+            {
+                string activedata = sheet.Range[row, 11].Value;
+
+                if (activedata == "0")
+                {
+                    DataRow dr = dt.NewRow();
+
+                    for (int col = 1; col <= columnCount; col++)
+                    {
+                        dr[col - 1] = sheet.Range[row, col].Value;
+                    }
+
+                    dt.Rows.Add(dr);
+                }
+            }
+
+            dataGridView1.DataSource = dt;
         }
 
-        private void button3_Click(object sender, EventArgs e)
+        private void btnBack_Click(object sender, EventArgs e)
         {
-            string filterText = txtSearch.Text.Trim();
+            Workbook book = new Workbook();
+            book.LoadFromFile(path.pathfile); //Change the path to where is the excel locate.
+            Worksheet sheet = book.Worksheets[0];
+            book.SaveToFile(path.pathfile);
+            this.Hide();
+        }
 
-            foreach (DataGridViewRow row in UserData.Rows)
+        public void GetActiveData()
+        {
+            //try
+            //{
+            DialogResult res = MessageBox.Show("Are you sure you want to active this user?", "Convfirmation", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            if (res == DialogResult.Yes)
             {
-                if (row.Cells["Column1"].Value != null)
+                int i = dataGridView1.SelectedRows[0].Index;
+                Form2 form2 = new Form2();
+                bool hasFound = false;
+                string name = "";
+                int active = 0;
+                int count = 0;
+
+                Workbook book = new Workbook();
+                book.LoadFromFile(path.pathfile); //Change the path to where is the excel locate.
+                Worksheet sheet = book.Worksheets[0];
+                int row = sheet.Rows.Length;
+
+                for (int r = 2; r <= row; r++)
                 {
-                    string Name = row.Cells["Column1"].Value.ToString();
-                    row.Visible = Name.StartsWith(filterText, StringComparison.OrdinalIgnoreCase);
+                    if (sheet.Range[r, 11].Value == "1")
+                    {
+                        active++;
+                    }
+                }
+
+                for (int rw = 2 + active; rw <= row; rw++)
+                {
+                    if (count == i)
+                    {
+                        sheet.Range[rw, 11].Value = "1";
+                        hasFound = true;
+                        name = sheet.Range[rw, 1].Value;
+                    }
+                    count++;
+                }
+
+                book.SaveToFile(path.pathfile);
+                if (hasFound == true)
+                {
+                    Logs.Log(Admin.Name, $"Remove {name} in inactive list");
+                }
+
+                LoadInactiveData();
+                form2.LoadActiveData();
+                DataSorting.datasorting();
+            }
+            //}
+            //catch(Exception ex)
+            //{
+            //    MessageBox.Show("No data can be Activate.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            //}
+        }
+
+        private void btnActive_Click(object sender, EventArgs e)
+        {
+            GetActiveData();
+        }
+
+        private void btnSearch_Click(object sender, EventArgs e)
+        {
+            string searchText = txtSearch.Text.Trim().ToLower();
+
+            dataGridView1.ClearSelection();
+            dataGridView1.CurrentCell = null;
+
+            foreach (DataGridViewRow row in dataGridView1.Rows)
+            {
+                if (!row.IsNewRow)
+                {
+                    string firstName = row.Cells[0].Value?.ToString().ToLower();
+
+                    row.Visible = string.IsNullOrEmpty(searchText) || (firstName != null && firstName.Contains(searchText));
                 }
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
-        {
-            foreach (DataGridViewRow row in UserData.SelectedRows)
-            {
-                UserData.Rows.Remove(row);
-            }
-        }
-
-
-        private void UserData_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-            Form1 form1 = new Form1(this);
-
-            int r = UserData.CurrentCell.RowIndex;
-            form1.lblID.Text = r.ToString();
-            form1.txtName.Text = UserData.Rows[r].Cells["Column1"].Value.ToString();
-            form1.txtSaying.Text = UserData.Rows[r].Cells["Column5"].Value.ToString();
-            form1.cmbFavoriteColor.Text = UserData.Rows[r].Cells["Column4"].Value.ToString();
-            switch (UserData.Rows[r].Cells["Column2"].Value)
-            {
-                case "Male":
-                    form1.radMale.Checked = true;
-                    break;
-                default:
-                    form1.radFemale.Checked = true;
-                    break;
-            }
-
-            string cellValue = UserData.Rows[r].Cells["Column3"].Value?.ToString();
-            if (!string.IsNullOrEmpty(cellValue))
-            {
-                string[] words = cellValue.Split(' ');
-
-                foreach (string word in words)
-                {
-                    if (word == "BasketBall")
-                    {
-                        form1.chkBasketball.Checked = true;
-                    }
-                    if (word == "VolleyBall")
-                    {
-                        form1.chkVolleyBall.Checked = true;
-                    }
-                    if (word == "Soccer")
-                    {
-                        form1.chkSoccer.Checked = true;
-                    }
-                }
-            }
-
-
-            this.Hide();
-            form1.Show();
-            form1.btnUpdate.Visible = true;
-            form1.btnAdd.Visible = false;
-            form1.btnDisplay.Visible = false;
-        }
-
-        private void button2_Click(object sender, EventArgs e)
-        {
-            //this.Close();
-            Login login = new Login();
-            login.Show();
-            this.Hide();
-        }
-
+        
     }
 }

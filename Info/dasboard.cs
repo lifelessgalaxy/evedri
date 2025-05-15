@@ -16,5 +16,32 @@ namespace Info
         {
             InitializeComponent();
         }
+
+        private void btnLogout_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnLogs_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnAddStud_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnInactive_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnActive_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        
     }
 }
